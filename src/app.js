@@ -11,6 +11,9 @@ app.get("/health", (req, res) => {
     uptime: process.uptime(),
   });
 });
+app.get("/temp", (req, res) => {
+  res.json({ temp: "ok" });
+});
 module.exports = app;
 
 /* istanbul ignore next -- bootstrap; only runs when invoked as `node src/app.js` */
